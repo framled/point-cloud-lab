@@ -20,4 +20,12 @@ The PCL installation should modify the environmental variable "path" in your win
 Check the variable "path" and verify its contents (it should contain all bin and some lib libraries - all of whom contain DLLs and EXEs under the PCL installation path).
 
 ==QT 5.0.1 Installation==
-QT development environment is widely used as the preferred cross platform development tool (for Windows, Linux, MacOsx, etc..). The coding is done in C++ language. You can make really nice and neat UI cross platform applications with QT. So lets download it: Go to [http://qt-project.org/downloads] and get the latest "Qt X.X.X for Windows 32-bit (VS 2010, 481 MB)". It important to download the version with the Visual-Studio XXXX toolchain for our purposes.
+QT development environment is widely used as the preferred cross platform development tool (for Windows, Linux, Mac-OsX, etc..). The coding is done in C++ language. You can make really nice and neat UI cross platform applications with QT. So lets download it: Go to [http://qt-project.org/downloads] and get the latest "Qt X.X.X for Windows 32-bit (VS 2010, 481 MB)". It important to download the version with the Visual-Studio XXXX toolchain for our purposes.
+
+==Visual Studio (C++) Download==
+By the time I wrote this page, the latest version of VC was 2012. After downloading the 2012 express edition, I noticed QT stopped working properly with the PCL libraries. The reason was the installation of the .NET framework 4.5 (apparently). I strongly suggest downloading the 2010 edition from [http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express]. You don't really need the whole Visual Studio, but just the Visual C++ 2010 Express (there's a separate download for that one).
+
+==Getting a Basic QT + PCL + VTK Program==
+No that you have all of the above stuff, just clone the PCLab program from my SVN repository and open it using QT. The building process is very long unfortunately. I'm still looking for a method to shorten the building time with BOOST, PCL and so on.
+
+David Michaeli
