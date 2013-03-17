@@ -3,9 +3,13 @@ This page present the long way to getting a working copy of PCL library (and its
 
 = Introduction =
 The installation process contains the following steps:
+
 1. Downloading PCL 1.6.0 library pre-built binaries.
+
 2. Installation of QT creator and QT-sdk 5.0.1
+
 3. Installation of Visual-Studio 2010 express (VC++ is sufficient).
+
 4. Getting the basic working program in QT.
 
 
