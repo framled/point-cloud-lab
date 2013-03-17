@@ -28,4 +28,18 @@ By the time I wrote this page, the latest version of VC was 2012. After download
 ==Getting a Basic QT + PCL + VTK Program==
 No that you have all of the above stuff, just clone the PCLab program from my SVN repository and open it using QT. The building process is very long unfortunately. I'm still looking for a method to shorten the building time with BOOST, PCL and so on.
 
+=QT Makefile=
+QT environment projects contain a .pro file which defines the project and how to build it. From a single glance its easy to notice the similarity to a regular Makefile. We need to define variables like "LIBS", "INCLUDEPATH" and so on.
+In our .pro file, among others I defined the include and library paths. The file starts with :
+
+{{{
+PCL_INSTALLATION_PATH = "C:/Program Files (x86)/PCL 1.6.0"
+VTK_VERSION = "5.8"
+BOOST_LIB_FILE = "boost_thread-vc100-mt-1_49"
+}}}
+
+So you can define the prefixes of your installations.
+
+
+Thats it. Enjoy...
 David Michaeli
