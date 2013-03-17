@@ -26,7 +26,7 @@ QT development environment is widely used as the preferred cross platform develo
 By the time I wrote this page, the latest version of VC was 2012. After downloading the 2012 express edition, I noticed QT stopped working properly with the PCL libraries. The reason was the installation of the .NET framework 4.5 (apparently). I strongly suggest downloading the 2010 edition from [http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express]. You don't really need the whole Visual Studio, but just the Visual C++ 2010 Express (there's a separate download for that one).
 
 ==Getting a Basic QT + PCL + VTK Program==
-No that you have all of the above stuff, just clone the PCLab program from my SVN repository and open it using QT. The building process is very long unfortunately. I'm still looking for a method to shorten the building time with BOOST, PCL and so on.
+Now if you have all of the above stuff, just clone the PCLab program from my SVN repository and open it using QT. The building process is very long unfortunately. I'm still looking for a method to shorten the building and linking time with BOOST, PCL and so on.
 
 =QT Makefile=
 QT environment projects contain a .pro file which defines the project and how to build it. From a single glance its easy to notice the similarity to a regular Makefile. We need to define variables like "LIBS", "INCLUDEPATH" and so on.
