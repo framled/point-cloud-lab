@@ -78,7 +78,7 @@ void MainWindow::PCLVisualizationThreadFinished()
     if (pclVisualization->isRunning())
     {
         qDebug() << "PCLVisualizationFinished: deleteLater";
-        pclVisualization->deleteLater();
+        pclVisualization->quit();
         qDebug() << "PCLVisualizationFinished: deleted";
     }
 

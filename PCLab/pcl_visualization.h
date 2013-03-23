@@ -36,12 +36,13 @@ protected:
 
 public:
     pcl_visualization(QObject *parent = 0);
-
-    void cloud_cb (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud);
-
+    void cloud_cb (pcl::PointCloud<pcl::PointXYZ>::Ptr cloud);
     void run ();
-
     pcl::visualization::PCLVisualizer viewer;
+
+    // Operations
+    void normalize_cloud (pcl::PointCloud<pcl::PointXYZ>::Ptr cloud);
+    pcl::PointXYZ& mean_point (pcl::PointCloud<pcl::PointXYZ>::Ptr cloud);
 
 signals:
     void Completed();
