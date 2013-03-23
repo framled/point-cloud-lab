@@ -4,10 +4,18 @@
 #include <QDebug>
 
 //==================================================================
+void pcl_visualization::keyboard_callback(const pcl::visualization::KeyboardEvent &ev, void* data)
+{
+    qDebug() << "Keyboard event";
+}
+
+
+//==================================================================
 pcl_visualization::pcl_visualization(QObject *parent)
     : QThread(parent), m_stopFlag(false), viewer("Point-Cloud View")
 {
-
+    viewer.registerKeyboardCallback(&pcl_visualization::keyboard_callback,
+                                    *this);
 }
 
 //==================================================================
@@ -120,7 +128,7 @@ void pcl_visualization::cloud_cb (pcl::PointCloud<pcl::PointXYZ>::Ptr cloud)
     // Estimate point normals
     ne.setSearchMethod (tree);
     ne.setInputCloud (cloud);
-    ne.setKSearch (50);
+    ne.setKSearch (10);
     ne.compute (*cloud_normals);
 
     qDebug() << "Adding visualizations to viewer.";
