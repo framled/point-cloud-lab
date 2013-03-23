@@ -11,11 +11,21 @@ void pcl_visualization::keyboard_callback(const pcl::visualization::KeyboardEven
 
 
 //==================================================================
+void pcl_visualization::mouse_callback(const pcl::visualization::MouseEvent &ev, void* data)
+{
+    qDebug() << "Mouse event";
+}
+
+
+
+//==================================================================
 pcl_visualization::pcl_visualization(QObject *parent)
     : QThread(parent), m_stopFlag(false), viewer("Point-Cloud View")
 {
     viewer.registerKeyboardCallback(&pcl_visualization::keyboard_callback,
-                                    *this);
+                                    *this, (void*)(&viewer));
+    viewer.registerMouseCallback(&pcl_visualization::mouse_callback,
+                                    *this, (void*)(&viewer));
 }
 
 //==================================================================

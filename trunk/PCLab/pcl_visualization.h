@@ -54,6 +54,7 @@ public slots:
     // events
 private:
     void keyboard_callback(const pcl::visualization::KeyboardEvent &ev, void* data);
+    void mouse_callback(const pcl::visualization::MouseEvent &ev, void* data);
 
 };
 
