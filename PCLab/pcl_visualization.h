@@ -51,6 +51,10 @@ signals:
 public slots:
     void StopThread();
 
+    // events
+private:
+    void keyboard_callback(const pcl::visualization::KeyboardEvent &ev, void* data);
+
 };
 
 
